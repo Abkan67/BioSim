@@ -21,7 +21,7 @@ function animate() {
   drawGraphs();
 
   if(frameNum == 20) {
-    e.populations[2]=10;
+    e.populations[3]=3;
   }
 }
 var running = true;
