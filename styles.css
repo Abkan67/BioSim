@@ -1,0 +1,13 @@
+#canvas {
+  background-color: white;
+  border: 5px solid black;
+  margin: 1%;
+  position: absolute;
+  width: 95%;
+  height: 95%;
+
+}
+body, html {
+  margin: 0px;
+  padding: 0px;
+}
