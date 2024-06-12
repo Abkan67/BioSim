@@ -12,14 +12,21 @@ var allGraphs = [
 function setup() {
   animate();
 }
+var frameNum = 0;
 function animate() {
   c.clearRect(0,0,1000,1000);
 
-  e.update();
+  e.update(frameNum++);
 
   drawGraphs();
+
+  if(frameNum == 20) {
+    e.populations[2]=10;
+  }
 }
-window.setInterval(()=>{animate();}, 100);
+var running = true;
+window.setInterval(()=>{if(running){animate();}}, 100);
+window.addEventListener("click", ()=>{running = !running})
 
 function variance() {
   return 1.35 + Math.random()-1;
